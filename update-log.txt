@@ -1,0 +1,22 @@
+Kota Carz website update log
+Date: 2026-07-05
+
+Applied changes:
+- Updated contact phone number to +91 72969 83702 and WhatsApp link to +917296983702 across site templates.
+- Updated business email to info@kotacarzselfdrive.com in all relevant templates.
+- Replaced Jaipur location references with Kota address: Unnamed Road, Indraprastha Industrial Area, Kota, Rajasthan 324005.
+- Changed branding from Best Way Carz / Bestway Carz / Bestwaycarzselfdrive to Kota Carz / KotaCarzSelfDrive.
+- Updated FAQ and blog content from Jaipur to Kota in `blog-details1.php`, `blog-grid.php`, `faqs.php`, and `index.php`.
+- Replaced outdated Google Maps embed URLs with a generic Kota Carz embed query in `contact.php` and `index.php`.
+- Renamed image asset `assets/img/car-rental-jaipur.png` to `assets/img/car-rental-kota.png` and updated references in `blog-details1.php` and `blog-grid.php`.
+
+Files changed:
+- header.php
+- footer.php
+- contact.php
+- index.php
+- faqs.php
+- blog-grid.php
+- blog-details1.php
+
+Note: Image asset rename completed successfully.
