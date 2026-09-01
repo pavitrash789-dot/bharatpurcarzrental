@@ -52,7 +52,7 @@ export default function SearchPalette({ isOpen, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 pt-20 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-start justify-center p-3 sm:p-6 pt-12 sm:pt-20 overflow-y-auto">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -66,21 +66,21 @@ export default function SearchPalette({ isOpen, onClose }) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: -20 }}
           transition={{ duration: 0.2 }}
-          className="relative w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-4 sm:p-6 shadow-2xl z-10 overflow-hidden"
+          className="relative w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl z-10 overflow-hidden"
         >
-          <div className="relative flex items-center border-b border-slate-200 dark:border-slate-800 pb-4">
-            <Search className="w-5 h-5 text-amber-500 dark:text-amber-400 mr-3" />
+          <div className="relative flex items-center border-b border-slate-200 dark:border-slate-800 pb-3 sm:pb-4 gap-2">
+            <Search className="w-5 h-5 text-amber-500 dark:text-amber-400 shrink-0" />
             <input
               type="text"
               autoFocus
-              placeholder="Search cars (Swift, Thar, etc.), travel guides, FAQs..."
+              placeholder="Search cars, guides, FAQs..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full bg-transparent text-base sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none"
+              className="w-full bg-transparent text-sm sm:text-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none"
             />
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 hover:text-black dark:hover:text-white"
+              className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 hover:text-black dark:hover:text-white shrink-0"
             >
               <X className="w-4 h-4" />
             </button>

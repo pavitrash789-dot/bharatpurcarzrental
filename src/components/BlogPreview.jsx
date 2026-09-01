@@ -8,24 +8,24 @@ export default function BlogPreview({ limit = 3, showHeading = true }) {
   const displayedBlogs = blogs.slice(0, limit);
 
   return (
-    <section className="py-20 px-4 sm:px-6 relative">
+    <section className="py-12 sm:py-20 px-3 sm:px-6 relative">
       <div className="max-w-7xl mx-auto">
         {showHeading && (
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 text-xs font-bold mb-3 uppercase tracking-wider">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 text-xs font-bold mb-2 sm:mb-3 uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Recent Posts!</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
               News And Insights!
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-2">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-base mt-2">
               We successfully cope with tasks of varying complexity, provide long-term guarantees and regularly master new technologies.
             </p>
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {displayedBlogs.map((blog, idx) => (
             <motion.article
               key={blog.id}
@@ -36,7 +36,7 @@ export default function BlogPreview({ limit = 3, showHeading = true }) {
               className="group glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
+                <div className="relative h-44 sm:h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
                   <img
                     src={blog.image}
                     alt={blog.title}
@@ -50,8 +50,8 @@ export default function BlogPreview({ limit = 3, showHeading = true }) {
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3 font-medium">
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mb-2 sm:mb-3 font-medium">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                       {blog.date}
@@ -62,20 +62,20 @@ export default function BlogPreview({ limit = 3, showHeading = true }) {
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2 mb-3 leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2 mb-2 sm:mb-3 leading-snug">
                     <Link to={`/blogs/${blog.slug}`}>{blog.title}</Link>
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed mb-3 sm:mb-4">
                     {blog.excerpt}
                   </p>
                 </div>
               </div>
 
-              <div className="p-6 pt-0 border-t border-slate-200 dark:border-slate-800/60 mt-2">
+              <div className="p-4 sm:p-6 pt-0 border-t border-slate-200 dark:border-slate-800/60 mt-1 sm:mt-2">
                 <Link
                   to={`/blogs/${blog.slug}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors mt-4"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors mt-3 sm:mt-4"
                 >
                   <span>Read Full Article</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -86,10 +86,10 @@ export default function BlogPreview({ limit = 3, showHeading = true }) {
         </div>
 
         {/* View all blogs CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <Link
             to="/blogs"
-            className="px-6 py-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 hover:text-black dark:hover:text-white font-bold text-xs sm:text-sm border border-slate-300 dark:border-slate-700 transition-all inline-flex items-center gap-2 shadow-sm"
+            className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 hover:text-black dark:hover:text-white font-bold text-xs sm:text-sm border border-slate-300 dark:border-slate-700 transition-all inline-flex items-center gap-2 shadow-sm"
           >
             <span>View All Insights & Guides</span>
             <ArrowRight className="w-4 h-4 text-amber-500 dark:text-amber-400" />

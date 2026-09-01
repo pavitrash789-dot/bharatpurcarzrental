@@ -30,33 +30,33 @@ export default function Footer({ onOpenBooking }) {
   return (
     <footer className="relative bg-slate-900 dark:bg-slate-950 text-slate-300 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800/80 overflow-hidden pt-16 transition-colors">
       {/* Top Banner Callout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-12">
-        <div className="rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-800 dark:via-slate-900 to-slate-800 dark:to-slate-900 border border-amber-500/30 p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl">
-          <div className="flex items-center gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-amber-500 flex items-center justify-center text-slate-950 font-black shrink-0 shadow-lg shadow-amber-500/30">
-              <Car className="w-8 h-8" />
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 pb-8 sm:pb-12">
+        <div className="rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-800 dark:via-slate-900 to-slate-800 dark:to-slate-900 border border-amber-500/30 p-5 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-6 shadow-2xl">
+          <div className="flex items-center gap-3.5 sm:gap-5">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-500 flex items-center justify-center text-slate-950 font-black shrink-0 shadow-lg shadow-amber-500/30">
+              <Car className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-black text-white">
+              <div className="text-lg sm:text-2xl font-black text-white">
                 Ready to explore Kota & Rajasthan?
               </div>
-              <p className="text-sm text-slate-300 mt-1 max-w-xl">
+              <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl">
                 {companyInfo.shortDescription}
               </p>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 shrink-0">
+          <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 w-full lg:w-auto shrink-0">
             <a
               href={`tel:${companyInfo.phoneRaw}`}
-              className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition-all flex items-center gap-2"
+              className="px-5 sm:px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm border border-slate-700 transition-all flex items-center justify-center gap-2 text-center"
             >
               <Phone className="w-4 h-4 text-amber-400" />
               <span>{companyInfo.phoneDisplay}</span>
             </a>
             <button
               onClick={onOpenBooking}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm shadow-lg shadow-amber-500/30 transition-all active:scale-95"
+              className="px-5 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm shadow-lg shadow-amber-500/30 transition-all active:scale-95 text-center"
             >
               Rent Your Next Car
             </button>
@@ -65,10 +65,10 @@ export default function Footer({ onOpenBooking }) {
       </div>
 
       {/* Main Footer Links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-800/60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 border-t border-slate-800/60 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
         {/* Col 1: Brand Info */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-3 sm:mb-4">
             <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black">
               <Car className="w-5 h-5" />
             </div>
@@ -76,7 +76,7 @@ export default function Footer({ onOpenBooking }) {
               KOTA<span className="text-amber-400">CARZ</span>
             </span>
           </div>
-          <p className="text-sm text-slate-400 leading-relaxed mb-6">
+          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 sm:mb-6">
             Leading self-drive car rental agency in Kota, Rajasthan. Well-maintained cars, verified documents, transparent pricing, and 24/7 roadside assistance.
           </p>
           <div className="flex items-center gap-3">
@@ -89,11 +89,11 @@ export default function Footer({ onOpenBooking }) {
 
         {/* Col 2: Working Hours */}
         <div>
-          <h3 className="text-white font-bold text-base mb-4 flex items-center gap-2">
+          <h3 className="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4 flex items-center gap-2">
             <Clock className="w-4 h-4 text-amber-400" />
             <span>Working Hours</span>
           </h3>
-          <ul className="space-y-3 text-sm text-slate-400">
+          <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-400">
             {companyInfo.workingHours.map((wh, idx) => (
               <li key={idx} className="flex flex-col border-b border-slate-800 pb-2 last:border-0">
                 <span className="font-semibold text-slate-200">{wh.days}:</span>
@@ -105,8 +105,8 @@ export default function Footer({ onOpenBooking }) {
 
         {/* Col 3: Quick Navigation */}
         <div>
-          <h3 className="text-white font-bold text-base mb-4">Quick Links</h3>
-          <ul className="space-y-2.5 text-sm text-slate-400">
+          <h3 className="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Quick Links</h3>
+          <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-slate-400">
             <li>
               <Link to="/cars" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
                 <ArrowRight className="w-3.5 h-3.5 text-amber-500" /> All Cars & Pricing
@@ -142,13 +142,13 @@ export default function Footer({ onOpenBooking }) {
 
         {/* Col 4: Head Office & Newsletter */}
         <div>
-          <h3 className="text-white font-bold text-base mb-4 flex items-center gap-2">
+          <h3 className="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4 flex items-center gap-2">
             <MapPin className="w-4 h-4 text-amber-400" />
             <span>Head Office</span>
           </h3>
-          <div className="text-sm text-slate-400 space-y-2 mb-4">
+          <div className="text-xs sm:text-sm text-slate-400 space-y-1.5 sm:space-y-2 mb-4">
             <p>{companyInfo.address}</p>
-            <p className="text-xs text-amber-400 font-mono">
+            <p className="text-xs text-amber-400 font-mono break-all">
               <Mail className="w-3.5 h-3.5 inline mr-1" /> {companyInfo.email}
             </p>
           </div>

@@ -26,13 +26,13 @@ export default function FaqAccordion({ showSearch = true, limit, activeCatDefaul
     <div className="w-full">
       {/* Category Tabs & Search Bar */}
       {showSearch && (
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div className="flex items-center gap-1.5 p-1 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto no-scrollbar">
             {faqCategories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap shrink-0 ${
                   activeCategory === cat
                     ? "bg-amber-500 text-slate-950 shadow"
                     : "text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white"
@@ -43,7 +43,7 @@ export default function FaqAccordion({ showSearch = true, limit, activeCatDefaul
             ))}
           </div>
 
-          <div className="relative w-full md:w-64">
+          <div className="relative w-full md:w-64 shrink-0">
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
@@ -57,7 +57,7 @@ export default function FaqAccordion({ showSearch = true, limit, activeCatDefaul
       )}
 
       {/* Accordion list */}
-      <div className="space-y-3">
+      <div className="space-y-2.5 sm:space-y-3">
         {displayedFaqs.map((faq) => {
           const isOpen = openId === faq.id;
           return (
@@ -71,19 +71,19 @@ export default function FaqAccordion({ showSearch = true, limit, activeCatDefaul
             >
               <button
                 onClick={() => setOpenId(isOpen ? "" : faq.id)}
-                className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4"
+                className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5 sm:gap-3">
                   <div
-                    className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
                       isOpen
                         ? "bg-amber-500 text-slate-950 font-black"
                         : "bg-slate-100 dark:bg-slate-800 text-amber-600 dark:text-amber-400"
                     }`}
                   >
-                    <HelpCircle className="w-4 h-4" />
+                    <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
-                  <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
+                  <h3 className="text-xs sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
                     {faq.question}
                   </h3>
                 </div>
@@ -93,7 +93,7 @@ export default function FaqAccordion({ showSearch = true, limit, activeCatDefaul
                   transition={{ duration: 0.25 }}
                   className="shrink-0 text-slate-400"
                 >
-                  <ChevronDown className="w-5 h-5" />
+                  <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.div>
               </button>
 
@@ -106,7 +106,7 @@ export default function FaqAccordion({ showSearch = true, limit, activeCatDefaul
                     transition={{ duration: 0.25 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200 dark:border-slate-800/60">
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200 dark:border-slate-800/60">
                       {faq.answer}
                     </div>
                   </motion.div>

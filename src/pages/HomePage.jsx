@@ -32,17 +32,17 @@ export default function HomePage({ onOpenBooking, onOpenFeedback }) {
       <TestimonialsSection onOpenFeedback={onOpenFeedback} />
 
       {/* 7. Frequently Asked Questions */}
-      <section className="py-20 px-4 sm:px-6 relative bg-slate-900/30 border-t border-slate-800/80">
+      <section className="py-12 sm:py-20 px-3 sm:px-6 relative bg-slate-900/30 border-t border-slate-800/80">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-3 uppercase tracking-wider">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-2 sm:mb-3 uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Faq Questions</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
               Frequently Asked Questions!
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-2">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-base mt-2">
               Everything your car rental needs is already here! Kota Carz, designed for your convenience.
             </p>
           </div>
