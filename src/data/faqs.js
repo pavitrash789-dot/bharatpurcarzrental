@@ -9,13 +9,13 @@ export const faqs = [
     "id": "faq-2",
     "category": "Fleet",
     "question": "What types of cars are available for rental in Kota?",
-    "answer": "We offer a variety of cars, including compact cars, sedans, SUVs, and more. You can choose the car that best suits your needs and preferences (Swift Dzire, Baleno, Ertiga, Brezza, i20, Kia Seltos, Mahindra Thar, Nexon, Scorpio)."
+    "answer": "We offer a variety of cars, including hatchbacks, compact SUVs, premium SUVs, and 7-seaters. You can choose the car that best suits your needs and preferences (Maruti Swift, Baleno, Fronx, Hyundai Creta, Mahindra Thar, Thar Rox, Scorpio S11, Scorpio N, XUV 7XO)."
   },
   {
     "id": "faq-3",
     "category": "Pricing",
     "question": "What are the rental rates and charges for your self-drive cars?",
-    "answer": "Our pricing varies depending on the type of car, the rental duration, and any additional services you may require. You can inquire about pricing through WhatsApp, and our team will provide you with all the details."
+    "answer": "Our pricing varies depending on the type of car, the rental duration, and any additional services you may require. Rates start at ₹2,500/day for the Maruti Swift and go up to ₹7,500/day for the Scorpio N, with 300 km included per day for all cars."
   },
   {
     "id": "faq-4",

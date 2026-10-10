@@ -74,7 +74,7 @@ export default function QuickBookingBar({ className = "" }) {
           >
             {cars.map((car) => (
               <option key={car.id} value={car.name} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
-                {car.name} ({car.category}) - {car.rentalRate}
+                {car.name} ({car.category}) - {car.rentalRate} • {car.includedKm}
               </option>
             ))}
           </select>

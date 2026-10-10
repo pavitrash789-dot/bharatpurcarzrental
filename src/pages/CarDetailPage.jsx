@@ -109,6 +109,11 @@ export default function CarDetailPage({ onOpenBooking }) {
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 Ex-Showroom Reference: {car.priceRange}
               </p>
+              {car.includedKm && (
+                <p className="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+                  {car.includedKm}
+                </p>
+              )}
             </div>
 
             {/* Quick Specs Grid */}
@@ -133,6 +138,12 @@ export default function CarDetailPage({ onOpenBooking }) {
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               {car.overview}
             </p>
+
+            {car.includedKm && (
+              <div className="px-3 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs font-bold text-emerald-600 dark:text-emerald-400 text-center">
+                Rental rate: {car.includedKm}
+              </div>
+            )}
 
             {/* Booking Actions */}
             <div className="space-y-2.5 sm:space-y-3 pt-2">

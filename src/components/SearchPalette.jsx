@@ -111,7 +111,7 @@ export default function SearchPalette({ isOpen, onClose }) {
                             {car.name}
                           </div>
                           <div className="text-xs text-slate-500 dark:text-slate-400">
-                            {car.category} • {car.rentalRate}
+                            {car.category} • {car.rentalRate} • {car.includedKm}
                           </div>
                         </div>
                       </div>

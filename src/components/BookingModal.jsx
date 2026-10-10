@@ -97,7 +97,7 @@ export default function BookingModal({ isOpen, onClose, initialCarId = null }) {
               >
                 {cars.map((car) => (
                   <option key={car.id} value={car.name}>
-                    {car.name} ({car.category}) • {car.rentalRate}
+                    {car.name} ({car.category}) • {car.rentalRate} • {car.includedKm}
                   </option>
                 ))}
               </select>

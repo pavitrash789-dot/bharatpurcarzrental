@@ -99,6 +99,9 @@ export default function CarCard({ car }) {
           <div>
             <span className="text-[10px] text-slate-500 block uppercase font-medium">Rental Rate</span>
             <span className="text-base sm:text-lg font-black text-amber-600 dark:text-amber-400">{car.rentalRate}</span>
+            {car.includedKm && (
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 block font-medium">{car.includedKm}</span>
+            )}
           </div>
           <div className="text-right">
             <span className="text-[10px] text-slate-500 block uppercase font-medium">Price Range</span>
