@@ -131,7 +131,7 @@ export default function QuickBookingBar({ className = "" }) {
             className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm shadow-lg shadow-amber-500/25 transition-all duration-200 active:scale-95 flex items-center justify-center gap-2"
           >
             <Send className="w-4 h-4 shrink-0" />
-            <span>Book Your Taxi</span>
+            <span>Book Your Car</span>
           </button>
         </div>
       </form>
